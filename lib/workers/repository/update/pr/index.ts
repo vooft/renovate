@@ -387,6 +387,8 @@ export async function ensurePr(
       } else if (!config.committedFiles && !config.rebaseRequested) {
         logger.debug(
           {
+            existingPrBodyHash,
+            newPrBodyHash,
             prTitle,
           },
           'PR body changed',
